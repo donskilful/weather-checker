@@ -4,7 +4,12 @@ import React from 'react';
 const Form = props => {
     return (
         <div className="container">
-            <div>{props.error ? error() : null}</div>
+            <div className="welcome-note">
+                <div className="welcome-title">Weather Checker</div>
+                <div className="welcome-body">Enter name of city and country to get weather details</div>
+            </div>
+            <div className="error-alert">{props.error ? error() : null}</div>
+            
             <form onSubmit={props.loadweather}>
                 <div className="row">
                     <div className="col-md-3 offset-md-2">

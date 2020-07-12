@@ -24,13 +24,13 @@ class App extends React.Component {
 
     //this handles the different weather icons
     this.weatherIcon = {
-      Snowflake: "fa-snowflake-o fa-2x",
-      Drizzle: "",
+      Snowflake: "fa fa-snowflake-o fa-2x",
+      Drizzle: "fa fa-tint fa-2x",
       Rain: "",
-      Thunderstorm: "",
+      Thunderstorm: "fa fa-bolt fa-2x",
       Atmosphere: "",
       Clear: "",
-      Cloud: ""
+      Cloud: "fa fa-cloud fa-2x"
     }
   }
 
@@ -40,6 +40,7 @@ class App extends React.Component {
     return celsius;
   }
 
+  //this handles the change in weather icon with respect to the weather
   get_WeatherIcon(icons, rangeId) {
     switch (true) {
       case rangeId >= 200 && rangeId <= 232:
